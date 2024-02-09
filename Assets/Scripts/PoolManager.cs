@@ -32,6 +32,8 @@ public class PoolManager : MonoBehaviour
         {
             obj = Instantiate(prefab);
             obj.transform.SetParent(parent.transform);
+            obj.SetActive(false);
+            pooledObject.Add(obj);
         }
     }
 
