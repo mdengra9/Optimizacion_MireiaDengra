@@ -37,9 +37,19 @@ public class PoolManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject GetPooledObject(Vector3 position, Quaternion rotation)
     {
-        
+        for (int i = 0; i < poolSize; i++)
+        {
+            if(!pooledObject[i].activeInHierarchy)
+            {
+                GameObject objectToSpawn;
+                objectToSpawn = pooledObject[i];
+                objectToSpawn.transform.position = position;
+                objectToSpawn.transform.rotation = rotation;
+                return objectToSpawn;
+            }
+        }
+        return null;
     }
 }
