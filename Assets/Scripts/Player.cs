@@ -5,18 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Transform gunPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int bulletTipe = 0;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            /*GameObject bullet = PoolManager.Instance.GetPooledObject(gunPosition.position, gunPosition.rotation);
+            GameObject bullet = PoolManager.Instance.GetPooledObject(bulletTipe, gunPosition.position, gunPosition.rotation);
             
             if(bullet != null)
             {
@@ -25,7 +21,7 @@ public class Player : MonoBehaviour
             else
             {
                 Debug.LogError("Pool demasiado pequeño");
-            }*/
+            }
         }
     }
 }
