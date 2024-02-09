@@ -490,10 +490,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682cf3186f5aac848b7c777b180fd609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentName: BulletPool
-  prefab: {fileID: 6690248810260604134, guid: d410bdc2232636744aa308728f8fbaf9, type: 3}
-  poolSize: 15
-  pooledObject: []
+  pools:
+  - parentName: BulletParent
+    prefab: {fileID: 6690248810260604134, guid: d410bdc2232636744aa308728f8fbaf9, type: 3}
+    poolSize: 10
+    pooledObject: []
+  - parentName: GranadaParent
+    prefab: {fileID: 6690248810260604134, guid: e61fd43fca263134b996618ae43e21b9, type: 3}
+    poolSize: 10
+    pooledObject: []
 --- !u!4 &872983615
 Transform:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            GameObject bullet = PoolManager.Instance.GetPooledObject(gunPosition.position, gunPosition.rotation);
+            /*GameObject bullet = PoolManager.Instance.GetPooledObject(gunPosition.position, gunPosition.rotation);
             
             if(bullet != null)
             {
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
             else
             {
                 Debug.LogError("Pool demasiado pequeño");
-            }
+            }*/
         }
     }
 }

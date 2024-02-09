@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PoolManager : MonoBehaviour
-{
+{    
     public static PoolManager Instance;
+    
+    [System.Serializable]
+    public class Pool
+    {
     [SerializeField] string parentName;
     [SerializeField] GameObject prefab;
     [SerializeField] int poolSize;
     [SerializeField] List<GameObject> pooledObject;
+    }
+
+    [SerializeField] List<Pool> pools;
+
 
     void Awake()
     {
@@ -23,7 +31,7 @@ public class PoolManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         GameObject parent = new GameObject(parentName);
         GameObject obj;
@@ -51,5 +59,5 @@ public class PoolManager : MonoBehaviour
             }
         }
         return null;
-    }
+    }*/
 }
