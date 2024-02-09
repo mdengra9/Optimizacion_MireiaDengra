@@ -31,18 +31,25 @@ public class PoolManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    /*void Start()
+    void Start()
     {
-        GameObject parent = new GameObject(parentName);
+        
         GameObject obj;
 
-        for (int i = 0; i < poolSize; i++)
+        foreach (Pool pool in pools)
         {
-            obj = Instantiate(prefab);
-            obj.transform.SetParent(parent.transform);
-            obj.SetActive(false);
-            pooledObject.Add(obj);
+            GameObject parent = new GameObject(parentName);
+
+            for (int i = 0; i < poolSize; i++)
+            {   
+                obj = Instantiate(prefab);
+                obj.transform.SetParent(parent.transform);
+                obj.SetActive(false);
+                pooledObject.Add(obj);
+            }
         }
+
+        
     }
 
     public GameObject GetPooledObject(Vector3 position, Quaternion rotation)
@@ -59,5 +66,5 @@ public class PoolManager : MonoBehaviour
             }
         }
         return null;
-    }*/
+    }
 }
