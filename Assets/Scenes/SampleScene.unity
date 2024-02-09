@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentName: BulletPool
   prefab: {fileID: 6690248810260604134, guid: d410bdc2232636744aa308728f8fbaf9, type: 3}
-  poolSize: 30
+  poolSize: 15
   pooledObject: []
 --- !u!4 &872983615
 Transform:
@@ -723,7 +723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPosition: {fileID: 1755905666}
-  bulletPrefab: {fileID: 6690248810260604134, guid: d410bdc2232636744aa308728f8fbaf9, type: 3}
 --- !u!1 &1755905665
 GameObject:
   m_ObjectHideFlags: 0
